@@ -141,7 +141,34 @@ export const content = {
           success: "Thank you! Your support ticket has been created.",
           error: "An error occurred. Please try again."
         },
-      },
+    },
+    testimonials: {
+      title: "What Our Clients Say",
+      description: "Discover why leading companies in the Kingdom trust Data Leader for their technology needs.",
+      items: [
+        {
+          name: "Ahmed Al-Fahad",
+          role: "CEO, Modern Ventures Co.",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "man portrait",
+          comment: "Data Leader's smart building system transformed our headquarters. We've seen a 30% reduction in energy costs and our employees love the automated environment.",
+        },
+        {
+          name: "Fatima Al-Jamil",
+          role: "IT Director, Royal Towers",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "woman portrait",
+          comment: "The network infrastructure they deployed is rock-solid. We've had zero downtime since the upgrade, which is critical for our 24/7 operations.",
+        },
+        {
+          name: "Yusuf Al-Mutairi",
+          role: "Facility Manager, Global Logistics",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "person portrait",
+          comment: "The security and AV systems installed in our new warehouse are top-notch. The integration is seamless and the user interface is incredibly easy to manage.",
+        },
+      ]
+    },
     footer: {
       copyright: "All rights reserved.",
     },
@@ -288,7 +315,34 @@ export const content = {
           success: "شكرًا لك! تم إنشاء تذكرة الدعم الخاصة بك.",
           error: "حدث خطأ. يرجى المحاولة مرة أخرى."
         },
-      },
+    },
+    testimonials: {
+      title: "ماذا يقول عملاؤنا",
+      description: "اكتشف لماذا تثق الشركات الرائدة في المملكة في مؤسسة البيانات الرائدة لتلبية احتياجاتها التقنية.",
+      items: [
+        {
+          name: "أحمد الفهد",
+          role: "الرئيس التنفيذي، شركة المشاريع الحديثة",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "man portrait",
+          comment: "نظام المباني الذكية من مؤسسة البيانات الرائدة غير مقرنا الرئيسي. لقد شهدنا انخفاضًا بنسبة 30٪ في تكاليف الطاقة ويحب موظفونا البيئة المؤتمتة.",
+        },
+        {
+          name: "فاطمة الجميل",
+          role: "مديرة تقنية المعلومات، أبراج رويال",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "woman portrait",
+          comment: "البنية التحتية للشبكة التي قاموا بنشرها قوية جدًا. لم نواجه أي توقف عن العمل منذ الترقية، وهو أمر بالغ الأهمية لعملياتنا على مدار الساعة طوال أيام الأسبوع.",
+        },
+        {
+          name: "يوسف المطيري",
+          role: "مدير المرافق، جلوبال لوجستكس",
+          avatar: "https://placehold.co/100x100.png",
+          aiHint: "person portrait",
+          comment: "أنظمة الأمن والصوتيات والمرئيات التي تم تركيبها في مستودعاتنا الجديدة على أعلى مستوى. التكامل سلس وواجهة المستخدم سهلة الإدارة بشكل لا يصدق.",
+        },
+      ]
+    },
     footer: {
       copyright: "جميع الحقوق محفوظة.",
     },
