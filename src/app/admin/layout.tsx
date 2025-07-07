@@ -19,6 +19,7 @@ import {
   FileText,
   MessageSquare,
   ArrowLeft,
+  Settings,
 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -38,6 +39,7 @@ export default function AdminLayout({
     { href: '/admin/products', label: 'Products', icon: ShoppingBag },
     { href: '/admin/rfqs', label: 'RFQs', icon: FileText },
     { href: '/admin/contacts', label: 'Contacts', icon: MessageSquare },
+    { href: '/admin/settings', label: 'Settings', icon: Settings },
   ];
 
   return (

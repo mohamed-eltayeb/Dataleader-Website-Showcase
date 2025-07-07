@@ -1,14 +1,17 @@
 'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ShoppingBag, FileText, MessageSquare, Sparkles } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ShoppingBag, FileText, MessageSquare, Sparkles, Settings } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { generateAdminInsights, GenerateAdminInsightsOutput } from '@/ai/flows/generate-admin-insights-flow';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
-// Mock data for demonstration
+// Mock data
 const mockDashboardData = {
     totalProducts: 5,
     newRfqs: [
@@ -24,12 +27,47 @@ const mockDashboardData = {
     ]
 };
 
+const mockSalesData = [
+    { month: 'Jan', sales: 120000 },
+    { month: 'Feb', sales: 180000 },
+    { month: 'Mar', sales: 150000 },
+    { month: 'Apr', sales: 210000 },
+    { month: 'May', sales: 250000 },
+    { month: 'Jun', sales: 230000 },
+];
+
 const priorityVariantMap: {[key: string]: "default" | "secondary" | "destructive" } = {
     High: 'destructive',
     Medium: 'default',
     Low: 'secondary'
 };
 
+const SalesChart = () => (
+    <Card>
+        <CardHeader>
+            <CardTitle>Sales Overview</CardTitle>
+            <CardDescription>Sales performance over the last 6 months.</CardDescription>
+        </CardHeader>
+        <CardContent>
+            <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={mockSalesData}>
+                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
+                    <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `SAR ${Number(value)/1000}k`} />
+                    <Tooltip 
+                        cursor={{fill: 'hsl(var(--secondary))'}}
+                        contentStyle={{
+                            background: 'hsl(var(--background))',
+                            border: '1px solid hsl(var(--border))',
+                            borderRadius: 'var(--radius)',
+                        }}
+                    />
+                    <Bar dataKey="sales" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+                </BarChart>
+            </ResponsiveContainer>
+        </CardContent>
+    </Card>
+)
 
 export default function DashboardPage() {
   const [insights, setInsights] = useState<GenerateAdminInsightsOutput | null>(null);
@@ -45,10 +83,6 @@ export default function DashboardPage() {
                   popularProducts: mockDashboardData.productActivity,
               });
               setInsights(result);
-              toast({
-                title: "AI Insights Generated",
-                description: "Your strategic recommendations are ready.",
-              })
           } catch (error) {
               console.error("Failed to fetch admin insights:", error);
               toast({
@@ -101,18 +135,23 @@ export default function DashboardPage() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className="lg:col-span-2">
-              <CardHeader>
-                  <CardTitle>Welcome to the Admin Panel</CardTitle>
+          <div className="lg:col-span-2 space-y-8">
+            <SalesChart />
+            <Card>
+              <CardHeader className="flex flex-row items-center gap-4">
+                  <Settings className="h-6 w-6 text-primary" />
+                  <CardTitle>Streamline Your Workflow</CardTitle>
               </CardHeader>
-              <CardContent>
-                  <p className="text-muted-foreground">
-                      This is a visual prototype of your admin panel. From here, you will be able to manage your products, review RFQ submissions, and handle contact requests.
-                      <br /><br />
-                      <strong>Note:</strong> This interface is not yet connected to a database. All data is for demonstration purposes. Full backend functionality, including authentication and data management, needs to be implemented separately.
+              <CardContent className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                  <p className="text-muted-foreground flex-1">
+                      Connect your favorite apps like Google Workspace and Slack to automate tasks and receive real-time notifications.
                   </p>
+                  <Button asChild>
+                    <Link href="/admin/settings">Manage Integrations</Link>
+                  </Button>
               </CardContent>
-          </Card>
+            </Card>
+          </div>
           
           <Card className="lg:col-span-1">
               <CardHeader className="flex flex-row items-center gap-2">
