@@ -7,7 +7,16 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 export default function ShopPage() {
-  const { content } = useLanguage();
+  const { content, language } = useLanguage();
+
+  const formatPrice = (price: number) =>
+    new Intl.NumberFormat(language === 'ar' ? 'ar-SA' : 'en-US', {
+      style: 'currency',
+      currency: 'SAR',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(price);
+
 
   return (
     <div className="space-y-12">
@@ -40,8 +49,11 @@ export default function ShopPage() {
             <CardContent className="flex-grow">
               <p className="text-muted-foreground">{product.description}</p>
             </CardContent>
-            <CardFooter className="flex justify-between items-center">
-              <p className="text-lg font-bold text-primary">{product.price}</p>
+            <CardFooter className="flex justify-between items-end">
+               <div className="text-left rtl:text-right">
+                <p className="text-sm text-muted-foreground">{content.shop.startingFrom}</p>
+                <p className="text-xl font-bold text-primary">{formatPrice(product.price)}</p>
+              </div>
               <Button asChild>
                 <Link href={`/shop/${product.id}`}>
                   {content.shop.viewDetails} <ArrowRight className="ms-2" />

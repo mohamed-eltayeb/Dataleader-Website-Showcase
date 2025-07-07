@@ -55,6 +55,7 @@ export const content = {
       description: "Explore our range of high-tech solutions designed to modernize your infrastructure.",
       viewDetails: "View Details",
       addToCart: "Add to Cart",
+      startingFrom: "Starts from",
       backToShop: "Back to Shop",
       itemAddedToCart: "Added to cart",
       configure: "Configure",
@@ -263,6 +264,17 @@ export const content = {
         },
       ]
     },
+    partners: {
+      title: "Trusted By The Best",
+      items: [
+        { name: "Modern Ventures", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Royal Towers", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Global Logistics", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Innovate Corp", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Future Solutions", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Kingdom Holdings", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+      ]
+    },
     footer: {
       copyright: "All rights reserved.",
     },
@@ -323,6 +335,7 @@ export const content = {
       description: "اكتشف مجموعتنا من الحلول التقنية المتقدمة المصممة لتحديث بنيتك التحتية.",
       viewDetails: "عرض التفاصيل",
       addToCart: "أضف إلى السلة",
+      startingFrom: "يبدأ من",
       backToShop: "العودة للمتجر",
       itemAddedToCart: "تمت الإضافة إلى السلة",
       configure: "تخصيص",
@@ -529,6 +542,17 @@ export const content = {
           aiHint: "person portrait",
           comment: "أنظمة الأمن والصوتيات والمرئيات التي تم تركيبها في مستودعاتنا الجديدة على أعلى مستوى. التكامل سلس وواجهة المستخدم سهلة الإدارة بشكل لا يصدق.",
         },
+      ]
+    },
+    partners: {
+      title: "موثوقون من قبل الأفضل",
+      items: [
+        { name: "Modern Ventures", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Royal Towers", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Global Logistics", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Innovate Corp", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Future Solutions", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
+        { name: "Kingdom Holdings", logo: "https://placehold.co/150x60.png", aiHint: "company logo" },
       ]
     },
     footer: {

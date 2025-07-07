@@ -14,6 +14,7 @@ import {
 import Link from 'next/link';
 import LocalizedGreeting from '@/components/localized-greeting';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Image from 'next/image';
 
 const serviceIcons: { [key: string]: React.ElementType } = {
   smart: Building2,
@@ -102,6 +103,28 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section id="partners" className="py-12 md:py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-primary">
+            {content.partners.title}
+          </h2>
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+            {content.partners.items.map((partner, index) => (
+              <div key={index} className="flex justify-center" title={partner.name}>
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={150}
+                  height={60}
+                  className="object-contain filter grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                  data-ai-hint={partner.aiHint}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

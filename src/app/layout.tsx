@@ -5,14 +5,21 @@ import { LanguageProvider } from '@/context/language-context';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Poppins } from 'next/font/google';
+import { Poppins, Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: ['600', '700'],
   variable: '--font-poppins',
 });
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-inter',
+});
+
 
 // Metadata cannot be exported from a client component.
 // If you need metadata, you'll have to move this to a server component.
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn('font-body antialiased', poppins.variable)}>
+      <body className={cn('font-body antialiased', poppins.variable, inter.variable)}>
         <LanguageProvider>
           <div className="flex flex-col min-h-screen">
             <Header />
