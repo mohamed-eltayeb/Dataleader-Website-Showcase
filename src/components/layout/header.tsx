@@ -21,6 +21,7 @@ export function Header() {
     { href: '/shop', label: content.nav.shop },
     { href: '/about', label: content.nav.about },
     { href: '/support', label: content.nav.support },
+    { href: '/rfq-parser', label: content.nav.rfqParser },
   ];
 
   const NavItems = ({ isMobile }: { isMobile?: boolean }) => (

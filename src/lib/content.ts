@@ -12,6 +12,7 @@ export const content = {
       about: "About Us",
       support: "Support",
       contact: "Contact",
+      rfqParser: "RFQ Parser",
     },
     hero: {
       headline: "Smart Technology For Modern Buildings",
@@ -73,7 +74,7 @@ export const content = {
           longDescription: "Our Smart Building System provides intelligent, centralized control over lighting, HVAC, and security systems. Enhance comfort, improve energy efficiency, and gain valuable insights into your building's operations.",
           price: 50000,
           image: "https://placehold.co/600x400.png",
-          aiHint: "smart home",
+          aiHint: "smart home technology",
           options: [
             { id: 'tier', label: 'System Tier', type: 'radio', choices: [
               { name: 'Essential', priceModifier: 0 },
@@ -96,8 +97,8 @@ export const content = {
           description: "Scalable and secure network infrastructure setup.",
           longDescription: "We design and deploy robust IT and network infrastructures tailored to your business needs. This package includes high-speed routers, switches, access points, and structured cabling to ensure reliable connectivity and data flow for your entire organization.",
           price: 35000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "network server",
+          image: "https://placehold.co/600x401.png",
+          aiHint: "network server room",
            options: [
             { id: 'scale', label: 'Infrastructure Scale', type: 'radio', choices: [
               { name: 'Small Business (up to 50 users)', priceModifier: 0 },
@@ -117,8 +118,8 @@ export const content = {
           description: "Integrated CCTV, access control, and alarm systems.",
           longDescription: "Protect your assets with our comprehensive security suite. It includes high-definition CCTV cameras, smart access control panels with biometric options, and an integrated fire and intrusion alarm system, all manageable from a single, intuitive interface.",
           price: 45000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "security camera",
+          image: "https://placehold.co/601x400.png",
+          aiHint: "security camera cctv",
           options: [
             { id: 'cameras', label: 'Camera Count', type: 'radio', choices: [
               { name: '8 Cameras', priceModifier: 0 },
@@ -140,8 +141,8 @@ export const content = {
           description: "High-quality AV solutions for commercial spaces.",
           longDescription: "Transform your meeting rooms and public areas with our professional AV solutions. This setup includes 4K displays, ceiling-mounted speakers, microphones, and a central control unit for seamless presentations, video conferencing, and background music.",
           price: 25000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "video conference",
+          image: "https://placehold.co/601x401.png",
+          aiHint: "video conference room",
           options: [
             { id: 'rooms', label: 'Number of Rooms', type: 'radio', choices: [
               { name: '1 Room', priceModifier: 0 },
@@ -164,8 +165,8 @@ export const content = {
           description: "Sustainable energy solution to reduce operational costs.",
           longDescription: "Go green and save on energy bills with our commercial-grade solar power system. We provide high-efficiency solar panels, inverters, and battery storage solutions tailored to your energy consumption, including full installation and grid connection services.",
           price: 80000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "solar panels",
+          image: "https://placehold.co/600x402.png",
+          aiHint: "solar panels roof",
            options: [
             { id: 'capacity', label: 'System Capacity', type: 'radio', choices: [
               { name: '20kW System', priceModifier: 0 },
@@ -217,6 +218,24 @@ export const content = {
           error: "An error occurred. Please try again."
         },
     },
+    rfqParser: {
+        title: "AI-Powered RFQ Parser",
+        description: "Paste your Request for Quotation (RFQ) text below. Our AI will analyze it, match it with our products, and provide a summary for our team.",
+        form: {
+            label: "Your RFQ Text",
+            placeholder: "Paste the full text of your RFQ here...",
+            submit: "Analyze RFQ",
+            loading: "Analyzing with AI...",
+            success: "Analysis complete!",
+        },
+        results: {
+            title: "Analysis Results",
+            matches: "Suggested Products",
+            noMatches: "No direct product matches found based on the RFQ. The summary below will be sent to our team for a custom solution.",
+            requirements: "Extracted Requirements",
+            summary: "Cleaned RFQ for Sales Team",
+        }
+    },
     testimonials: {
       title: "What Our Clients Say",
       description: "Discover why leading companies in the Kingdom trust Data Leader for their technology needs.",
@@ -231,14 +250,14 @@ export const content = {
         {
           name: "Fatima Al-Jamil",
           role: "IT Director, Royal Towers",
-          avatar: "https://placehold.co/100x100.png",
+          avatar: "https://placehold.co/101x101.png",
           aiHint: "woman portrait",
           comment: "The network infrastructure they deployed is rock-solid. We've had zero downtime since the upgrade, which is critical for our 24/7 operations.",
         },
         {
           name: "Yusuf Al-Mutairi",
           role: "Facility Manager, Global Logistics",
-          avatar: "https://placehold.co/100x100.png",
+          avatar: "https://placehold.co/100x101.png",
           aiHint: "person portrait",
           comment: "The security and AV systems installed in our new warehouse are top-notch. The integration is seamless and the user interface is incredibly easy to manage.",
         },
@@ -261,6 +280,7 @@ export const content = {
       about: "من نحن",
       support: "الدعم الفني",
       contact: "اتصل بنا",
+      rfqParser: "تحليل الطلبات",
     },
     hero: {
       headline: "تقنيات ذكية لمبانٍ عصرية",
@@ -322,7 +342,7 @@ export const content = {
           longDescription: "يوفر نظام المباني الذكية الخاص بنا تحكمًا مركزيًا ذكيًا في أنظمة الإضاءة والتكييف والأمن. عزز الراحة، وحسّن كفاءة الطاقة، واحصل على رؤى قيمة حول عمليات المبنى.",
           price: 50000,
           image: "https://placehold.co/600x400.png",
-          aiHint: "smart home",
+          aiHint: "smart home technology",
           options: [
             { id: 'tier', label: 'فئة النظام', type: 'radio', choices: [
               { name: 'أساسي', priceModifier: 0 },
@@ -345,8 +365,8 @@ export const content = {
           description: "بنية تحتية للشبكات قابلة للتطوير وآمنة.",
           longDescription: "نقوم بتصميم ونشر بنى تحتية قوية لتقنية المعلومات والشبكات مصممة خصيصًا لاحتياجات عملك. تتضمن هذه الحزمة أجهزة توجيه عالية السرعة ومحولات ونقاط وصول وكابلات منظمة لضمان اتصال موثوق وتدفق بيانات لمؤسستك بأكملها.",
           price: 35000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "network server",
+          image: "https://placehold.co/600x401.png",
+          aiHint: "network server room",
            options: [
             { id: 'scale', label: 'حجم البنية التحتية', type: 'radio', choices: [
               { name: 'أعمال صغيرة (حتى 50 مستخدم)', priceModifier: 0 },
@@ -366,8 +386,8 @@ export const content = {
           description: "أنظمة متكاملة لكاميرات المراقبة والتحكم بالدخول والإنذار.",
           longDescription: "احمِ أصولك مع مجموعتنا الأمنية الشاملة. تتضمن كاميرات مراقبة عالية الدقة، ولوحات تحكم بالدخول ذكية مع خيارات بيومترية، ونظام إنذار متكامل للحريق والتسلل، وكلها قابلة للإدارة من واجهة واحدة سهلة الاستخدام.",
           price: 45000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "security camera",
+          image: "https://placehold.co/601x400.png",
+          aiHint: "security camera cctv",
           options: [
             { id: 'cameras', label: 'عدد الكاميرات', type: 'radio', choices: [
               { name: '8 كاميرات', priceModifier: 0 },
@@ -389,8 +409,8 @@ export const content = {
           description: "حلول صوتية ومرئية عالية الجودة للمساحات التجارية.",
           longDescription: "حوّل غرف الاجتماعات والمناطق العامة الخاصة بك مع حلولنا الصوتية والمرئية الاحترافية. يتضمن هذا الإعداد شاشات 4K، ومكبرات صوت مثبتة في السقف، وميكروفونات، ووحدة تحكم مركزية لعروض تقديمية ومؤتمرات فيديو وموسيقى خلفية سلسة.",
           price: 25000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "video conference",
+          image: "https://placehold.co/601x401.png",
+          aiHint: "video conference room",
           options: [
             { id: 'rooms', label: 'عدد الغرف', type: 'radio', choices: [
               { name: 'غرفة واحدة', priceModifier: 0 },
@@ -413,8 +433,8 @@ export const content = {
           description: "حل طاقة مستدام لتقليل التكاليف التشغيلية.",
           longDescription: "اتجه نحو البيئة الخضراء ووفر في فواتير الطاقة مع نظام الطاقة الشمسية التجاري الخاص بنا. نحن نقدم ألواح طاقة شمسية عالية الكفاءة، ومحولات، وحلول تخزين بطاريات مصممة خصيصًا لاستهلاكك للطاقة، بما في ذلك خدمات التركيب الكامل والربط بالشبكة.",
           price: 80000,
-          image: "https://placehold.co/600x400.png",
-          aiHint: "solar panels",
+          image: "https://placehold.co/600x402.png",
+          aiHint: "solar panels roof",
            options: [
             { id: 'capacity', label: 'سعة النظام', type: 'radio', choices: [
               { name: 'نظام 20 كيلوواط', priceModifier: 0 },
@@ -466,6 +486,24 @@ export const content = {
           error: "حدث خطأ. يرجى المحاولة مرة أخرى."
         },
     },
+    rfqParser: {
+        title: "محلل طلبات عروض الأسعار بالذكاء الاصطناعي",
+        description: "الصق نص طلب عرض الأسعار (RFQ) الخاص بك أدناه. سيقوم الذكاء الاصطناعي لدينا بتحليله ومطابقته مع منتجاتنا وتقديم ملخص لفريقنا.",
+        form: {
+            label: "نص طلب عرض السعر الخاص بك",
+            placeholder: "الصق النص الكامل لطلب عرض السعر الخاص بك هنا...",
+            submit: "تحليل الطلب",
+            loading: "جاري التحليل بالذكاء الاصطناعي...",
+            success: "اكتمل التحليل!",
+        },
+        results: {
+            title: "نتائج التحليل",
+            matches: "المنتجات المقترحة",
+            noMatches: "لم يتم العثور على منتجات مطابقة بشكل مباشر بناءً على طلب عرض الأسعار. سيتم إرسال الملخص أدناه إلى فريقنا لإعداد حل مخصص.",
+            requirements: "المتطلبات المستخرجة",
+            summary: "طلب عرض أسعار منقح لفريق المبيعات",
+        }
+    },
     testimonials: {
       title: "ماذا يقول عملاؤنا",
       description: "اكتشف لماذا تثق الشركات الرائدة في المملكة في مؤسسة البيانات الرائدة لتلبية احتياجاتها التقنية.",
@@ -480,14 +518,14 @@ export const content = {
         {
           name: "فاطمة الجميل",
           role: "مديرة تقنية المعلومات، أبراج رويال",
-          avatar: "https://placehold.co/100x100.png",
+          avatar: "https://placehold.co/101x101.png",
           aiHint: "woman portrait",
           comment: "البنية التحتية للشبكة التي قاموا بنشرها قوية جدًا. لم نواجه أي توقف عن العمل منذ الترقية، وهو أمر بالغ الأهمية لعملياتنا على مدار الساعة طوال أيام الأسبوع.",
         },
         {
           name: "يوسف المطيري",
           role: "مدير المرافق، جلوبال لوجستكس",
-          avatar: "https://placehold.co/100x100.png",
+          avatar: "https://placehold.co/100x101.png",
           aiHint: "person portrait",
           comment: "أنظمة الأمن والصوتيات والمرئيات التي تم تركيبها في مستودعاتنا الجديدة على أعلى مستوى. التكامل سلس وواجهة المستخدم سهلة الإدارة بشكل لا يصدق.",
         },
