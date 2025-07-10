@@ -7,7 +7,7 @@ import { LanguageToggle } from '@/components/language-toggle';
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
 import { useState } from 'react';
 
 export function Header() {
@@ -68,6 +68,9 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent>
+              <SheetHeader>
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+              </SheetHeader>
               <div className="flex flex-col items-start pt-10">
                 <NavItems isMobile />
                 <div className="mt-6 w-full">
