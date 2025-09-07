@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
@@ -18,17 +19,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
 
   useEffect(() => {
+    // This effect runs once on the client to set the initial language from the browser
     const browserLang = navigator.language.split('-')[0];
     if (browserLang === 'ar') {
       setLanguage('ar');
     }
   }, []);
-
-  useEffect(() => {
-    const dir = language === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = language;
-    document.documentElement.dir = dir;
-  }, [language]);
 
   const value = useMemo(() => ({
     language,

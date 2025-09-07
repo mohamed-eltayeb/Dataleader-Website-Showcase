@@ -1,3 +1,4 @@
+
 'use client';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -7,6 +8,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Poppins, Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import { LanguageDirection } from '@/components/language-direction';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -40,6 +42,7 @@ export default function RootLayout({
       <head />
       <body className={cn('font-body antialiased', poppins.variable, inter.variable)}>
         <LanguageProvider>
+          <LanguageDirection />
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">{children}</main>
